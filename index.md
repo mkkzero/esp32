@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+# 1. Install Arduino IDE
 
-You can use the [editor on GitHub](https://github.com/mkkzero/esp32-setup/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Go to https://www.arduino.cc and download the latest Arduino IDE. Click “Just download” to get the installation file.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Let everything default and finish installing the Arduino IDE
 
-### Markdown
+Click Install to install COM driver for Arduino IDE. Total is 4-5 times for many kinds of drivers.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## 2. Install library for ESP32
 
-```markdown
-Syntax highlighted code block
+We need to install ESP32 library for this board as it uses ESP32 as the core processor. ESP32 controlls GPIO, WiFi, BLE, and even SPI for LoRa.
 
-# Header 1
-## Header 2
-### Header 3
+Put in stable release link into File > References > Settings > Additional Board manager URL > Click the icon and fill in the link in A NEW LINE https://dl.espressif.com/dl/package_esp32_index.json
 
-- Bulleted
-- List
+Open Tools > Boards > Board Manager
+Search for ESP32 and click Install
+Now open Arduino IDE, click Tools > Board > (scroll down) ESP32 Dev Module. If you see a lot of ESP32 boards, you’ve DONE successfully.
+Reboot Arduino IDE.
 
-1. Numbered
-2. List
+###3. Troubleshooting:
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mkkzero/esp32-setup/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+IF you have some warnings about "Invalid library found ... BLE or AzureIoT", the clone in step 3 doesn't get all sourcecode about BLT or AzueIoT. You can simply ignore them if you're not using BLE or AzueIoT.
