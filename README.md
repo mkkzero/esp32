@@ -1,5 +1,4 @@
 # esp32-setup
-step by step ESP32 guide
 
 # 1. Install Arduino IDE
 
@@ -24,3 +23,5 @@ Reboot Arduino IDE.
 ###3. Troubleshooting:
 
 IF you have some warnings about "Invalid library found ... BLE or AzureIoT", the clone in step 3 doesn't get all sourcecode about BLT or AzueIoT. You can simply ignore them if you're not using BLE or AzueIoT.
+
+made by Mohanad Ghurab for the summer training for the IOT task in smart methods
