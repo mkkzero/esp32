@@ -1,0 +1,26 @@
+# esp32-setup
+step by step ESP32 guide
+
+# 1. Install Arduino IDE
+
+Go to https://www.arduino.cc and download the latest Arduino IDE. Click “Just download” to get the installation file.
+
+Let everything default and finish installing the Arduino IDE
+
+Click Install to install COM driver for Arduino IDE. Total is 4-5 times for many kinds of drivers.
+
+
+## 2. Install library for ESP32
+
+We need to install ESP32 library for this board as it uses ESP32 as the core processor. ESP32 controlls GPIO, WiFi, BLE, and even SPI for LoRa.
+
+Put in stable release link into File > References > Settings > Additional Board manager URL > Click the icon and fill in the link in A NEW LINE https://dl.espressif.com/dl/package_esp32_index.json
+
+Open Tools > Boards > Board Manager
+Search for ESP32 and click Install
+Now open Arduino IDE, click Tools > Board > (scroll down) ESP32 Dev Module. If you see a lot of ESP32 boards, you’ve DONE successfully.
+Reboot Arduino IDE.
+
+###3. Troubleshooting:
+
+IF you have some warnings about "Invalid library found ... BLE or AzureIoT", the clone in step 3 doesn't get all sourcecode about BLT or AzueIoT. You can simply ignore them if you're not using BLE or AzueIoT.
